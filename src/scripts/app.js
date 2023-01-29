@@ -76,13 +76,13 @@ function displayWeather(data){
 }
 
 function formatDate(epochTime) {
-    let date = new Date(epochTime + 1000)
-    let formattedDate = date.toLocaleDateString('pt-BR', { month: "long" , day: "numeric" })
+    let date = new Date(epochTime * 1000)
+    let formattedDate = date.toLocaleDateString('pt-BR', { month: "long", day: 'numeric' })
     return `Hoje, ${formattedDate}`
 }
 
 function formatTime(epochTime) {
-    let date = new Date(epochTime + 1000)
+    let date = new Date(epochTime * 1000)
     let hours = date.getHours()
     let minutes = date.getMinutes()
     return `${hours}:${minutes}`
